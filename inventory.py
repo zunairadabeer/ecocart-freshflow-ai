@@ -5,14 +5,14 @@ class InventoryItem:
 
     def __init__(self, name, quantity, expiry_date):
 
-        name = name
-        quantity = quantity
-        expiry_date = expiry_date
+        self.name = name
+        self.quantity = quantity
+        self.expiry_date = expiry_date
 
     def days_until_expiry(self):
 
         expiry = datetime.strptime(
-            expiry_date,
+            self.expiry_date,
             "%Y-%m-%d"
         )
 
